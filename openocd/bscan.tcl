@@ -1,0 +1,10 @@
+
+set BSCAN_SAMPLE    0x005
+set BSCAN_LEN       2016
+
+
+irscan EP1AGX90EF1152C6N.tap $BSCAN_SAMPLE
+drscan EP1AGX90EF1152C6N.tap $BSCAN_LEN 0
+
+#set result [drscan EP1AGX90EF1152C6N.tap $BSCAN_LEN 0]
+#puts $result
