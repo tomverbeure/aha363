@@ -4,6 +4,9 @@
 
     * [Arria GX Handbook](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/agx/arriagx_handbook.pdf)
     * 1152 pins
+    * [Arria GX pinout](https://www.intel.com/content/www/us/en/programmable/support/literature/lit-dp.html)
+    * [BSDL files for Arria GX FPGAs](https://www.intel.com/content/www/us/en/programmable/support/support-resources/download/board-layout-test/bsdl/arriagx.html) and
+      [BSDL file for this FPGA](https://www.intel.com/content/dam/altera-www/global/en_US/others/support/devices/bsdl/EP1AGX90EF1152.BSD)
 
     * [Quartus 11.0sp1 Download](https://www.intel.com/content/www/us/en/programmable/downloads/software/quartus-ii-we/110sp1.html)
       Last free version that supports Arria GX.
@@ -18,6 +21,9 @@
     for 4x PCIe reference design with EPM570 to handle bootup and flash programming. 
 
     [Parallel Flash Load IP Core User Guide](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/an/an386.pdf)
+
+    [BSDL files for MAX II CPLDs](https://www.intel.com/content/www/us/en/programmable/support/support-resources/download/board-layout-test/bsdl/max2.html)
+    [BSDL file for EPM570F100](https://www.intel.com/content/dam/altera-www/global/en_US/others/support/devices/bsdl/EPM570F100.BSD)
     
 
 * 2x AHA3610B HW Compression ASIC
@@ -49,8 +55,7 @@ bottom   top
 2: TDO   GND
 3: TCK   GND
 ---
-4: TMS   GND
-5: VREF  GND
+4: TMS   GND 5: VREF  GND
 
 
 Arria TDI does not go to connector but goes to TDO of MAX2.
@@ -59,7 +64,8 @@ Pins:
 
 AJ19:   Xtal 100
 
-MSEL[3:0]: 4'b1100 - Remote system upgrade FPP with decompression feature enabled
+MSEL[3:0]: 4'b1100  - Remote system upgrade FPP with decompression feature enabled
+RUnLU:     1'b0     - Local update
 
 PCIe Pinout: https://en.wikipedia.org/wiki/PCI_Express#Pinout
 
@@ -126,5 +132,15 @@ Dump JTAG boundary scan of empty bitstream and dump
     Then use that number...
 
 * Also: set all unused pins to input-tristate
+
+* Settings -> Assembler: Always enable input buffers
+
+    "This option is required for the SAMPLE/PRELOAD JTAG instruction to function correctly on output pins."
+
+
+* Load SOF:
+
+    * 11ms of bursts of DCLK while STATUSn is high
+    * then STATUSn goes low
 
 
