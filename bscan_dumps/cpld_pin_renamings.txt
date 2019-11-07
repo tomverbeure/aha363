@@ -1,0 +1,63 @@
+# Information matches table 2-10 of Arria GX Development board
+# http://static6.arrow.com/aropdfconversion/8a0fa1b74c4ba00b20a5b2c3e5429593b6c2bd57/rm_arria_gx_pcie_board.pdf
+E1      : CLK100
+D8      : FPGA_CONF_DONE
+B10     : FPGA_nSTATUS
+D9      : FPGA_nCONFIG
+C9      : FPGA_CONFIG_DCLK
+A7      : FPGA_CONFIG_D[7]
+A6      : FPGA_CONFIG_D[6]
+B6      : FPGA_CONFIG_D[5]
+A5      : FPGA_CONFIG_D[4]
+B5      : FPGA_CONFIG_D[3]
+A4      : FPGA_CONFIG_D[2]
+B4      : FPGA_CONFIG_D[1]
+C4      : FPGA_CONFIG_D[0]
+
+F2      : FLASH_CEn
+G2      : FLASH_OEn
+A5      : FLASH_WEn
+
+# Doc defines 25 bit vector but only specified 24 pins.
+#K2      : FLASH_A[24]
+K2      : FLASH_A[23]
+K3      : FLASH_A[22]
+H4      : FLASH_A[21]
+J4      : FLASH_A[20]
+K4      : FLASH_A[19]
+J5      : FLASH_A[18]
+K5      : FLASH_A[17]
+K6      : FLASH_A[16]
+J6      : FLASH_A[15]
+K7      : FLASH_A[14]
+K8      : FLASH_A[13]
+H7      : FLASH_A[12]
+J8      : FLASH_A[11]
+H8      : FLASH_A[10]
+K10     : FLASH_A[9]
+J9      : FLASH_A[8]
+H9      : FLASH_A[7]
+J10     : FLASH_A[6]
+H10     : FLASH_A[5]
+G8      : FLASH_A[4]
+G9      : FLASH_A[3]
+G10     : FLASH_A[2]
+F10     : FLASH_A[1]
+F9      : FLASH_A[0]
+
+C2      : FLASH_D[15]
+B1      : FLASH_D[14]
+C1      : FLASH_D[13]
+D3      : FLASH_D[12]
+D2      : FLASH_D[11]
+D1      : FLASH_D[10]
+E3      : FLASH_D[9]
+F2      : FLASH_D[8]
+F3      : FLASH_D[7]
+F1      : FLASH_D[6]
+G1      : FLASH_D[5]
+H1      : FLASH_D[4]
+G2      : FLASH_D[3]
+G3      : FLASH_D[2]
+K1      : FLASH_D[1]
+J3      : FLASH_D[0]

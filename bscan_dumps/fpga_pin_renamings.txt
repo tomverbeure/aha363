@@ -1,9 +1,27 @@
-AJ19:CLK100
-K10:MSEL[0]
-J9:MSEL[1]
-J10:MSEL[2]
-H11:MSEL[3]
-G20:PGM[2]
-H20:PGM[1]
-H22:PGM[0]
-AH18:RUnLU
+AJ19        : CLK100
+K10         : MSEL[0]
+J9          : MSEL[1]
+J10         : MSEL[2]
+H11         : MSEL[3]
+G20         : PGM[2]
+H20         : PGM[1]
+H22         : PGM[0]
+AH18        : RUnLU
+C32         : DCLK
+C31         : CONF_DONE
+D31         : nSTATUS
+D30         : nCE
+AL30        : nCONFIG
+G28         : INIT_DONE
+
+J20         : D[0]
+J22         : D[1]
+G25         : D[2]
+F27         : D[3]
+H25         : D[4]
+G27         : D[5]
+G26         : D[6]
+H26         : D[7]
+
+G21         : nCSO
+G22         : CRC_ERROR
