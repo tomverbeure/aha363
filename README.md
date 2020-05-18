@@ -50,18 +50,20 @@ JTAG connector:
 
 top: from left to right
 
+```
 bottom   top
 1: TDI   NC
 2: TDO   GND
 3: TCK   GND
 ---
 4: TMS   GND 5: VREF  GND
-
+```
 
 Arria TDI does not go to connector but goes to TDO of MAX2.
 
 Pins:
 
+```
 AJ19:   Xtal 100
 
 MSEL[3:0]: 4'b1100  - Remote system upgrade FPP with decompression feature enabled
@@ -95,6 +97,7 @@ HSIp(1)     : N1
 
 HSIn(0)     : R2
 HSIp(0)     : R1
+```
 
 Dump Flash file:
 
