@@ -33,7 +33,9 @@
 Quartus install:
 
 To avoid this error:
+```
 `ImportError: /usr/lib/i386-linux-gnu/libfreetype.so.6: symbol png_set_expand_gray_1_2_4_to_8, version PNG12_0 not defined in file libpng12.so.0 with link time reference`
+```
 
 Do:
 
@@ -121,10 +123,12 @@ Reprogram the Flash file:
 
 Dump JTAG boundary scan of original bitstream and dump:
 
+```
 cd openocd
 sudo /opt/openocd/bin/openocd -f /opt/openocd/share/openocd/scripts/interface/altera-usb-blaster.cfg -f ./aha363.tcl
 telnet localhost 4444
 source bscan.tcl
+```
 
 Dump JTAG boundary scan of empty bitstream and dump
 
