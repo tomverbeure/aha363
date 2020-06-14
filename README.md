@@ -58,7 +58,8 @@ bottom   top
 2: TDO   GND
 3: TCK   GND
 ---
-4: TMS   GND 5: VREF  GND
+4: TMS   GND 
+5: VREF  GND
 ```
 
 Arria TDI does not go to connector but goes to TDO of MAX2.
@@ -131,7 +132,6 @@ source bscan.tcl
 ```
 
 Dump JTAG boundary scan of empty bitstream and dump
-
 
 * Create design with only inputs
 
