@@ -116,11 +116,13 @@ LED_6       : AL21
 ```
 
 PSU configuration:
+
 12V power is supplied via the PCIe edge connector, or via JP2. This is converted by U10 (VPOL5A-12-SMT) into 5v. This is then fed into the following:
 * U14: EN5335QI, configured for 3.3v output (3A)
 * U6: EN5365QI, configured for 3.3v output (6A)
 * U7: EN5365QI, configured for 1.2v output (6A)
 * U8: EN5365QI, configured for 2.5v output (6A)
+
 However, the outputs of U6 and U7 have been bridged. This results in U7 becoming hot during use. The cause of this is unclear, but it is assumed that this is an error in the configuration of U7.
 
 Dump Flash file:
