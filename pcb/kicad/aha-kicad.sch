@@ -1174,50 +1174,39 @@ TEMP_INT
 Text GLabel -1200 10200 0    50   Input ~ 0
 FPGA_TEMPDIODEn
 Text GLabel 15800 1650 0    50   Output ~ 0
-FPGA_TEMPDIODEn
-Text GLabel 16250 4750 0    50   Input ~ 0
+FPGA_TEMPDIODEp
+Text GLabel 16250 1000 0    50   Input ~ 0
 JTAG_TCK
 Wire Wire Line
-	16650 4750 16250 4750
-Text GLabel 16250 4850 0    50   Input ~ 0
+	16650 1000 16250 1000
+Text GLabel 16250 1100 0    50   Input ~ 0
 JTAG_TMS
 Wire Wire Line
-	16650 4850 16250 4850
+	16650 1100 16250 1100
 Wire Wire Line
-	16250 5050 16650 5050
+	16250 1300 16650 1300
 Wire Wire Line
-	16650 5150 16250 5150
+	16650 1400 16250 1400
 Text GLabel 2450 5750 0    50   Output ~ 0
 FPGA_JTAG_TDI
-Text GLabel 16250 5050 0    50   Input ~ 0
+Text GLabel 16250 1300 0    50   Input ~ 0
 FPGA_JTAG_TDI
 $Comp
 L Device:R R227
 U 1 1 5F8A0B1B
-P 15450 4750
-F 0 "R227" H 15520 4796 50  0000 L CNN
-F 1 "R" H 15520 4705 50  0000 L CNN
-F 2 "" V 15380 4750 50  0001 C CNN
-F 3 "~" H 15450 4750 50  0001 C CNN
-	1    15450 4750
+P 15450 1000
+F 0 "R227" H 15520 1046 50  0000 L CNN
+F 1 "R" H 15520 955 50  0000 L CNN
+F 2 "" V 15380 1000 50  0001 C CNN
+F 3 "~" H 15450 1000 50  0001 C CNN
+	1    15450 1000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	15450 4950 15450 4900
+	15450 1200 15450 1150
 Wire Wire Line
-	15450 4950 16650 4950
-$Comp
-L aha:VTT U?
-U 1 1 5F8B6815
-P 15450 4600
-F 0 "U?" H 15528 4784 50  0000 L CNN
-F 1 "VTT" H 15528 4693 50  0000 L CNN
-F 2 "" H 15450 4600 50  0001 C CNN
-F 3 "" H 15450 4600 50  0001 C CNN
-	1    15450 4600
-	1    0    0    -1  
-$EndComp
-Text GLabel 16250 5150 0    50   Input ~ 0
+	15450 1200 16650 1200
+Text GLabel 16250 1400 0    50   Input ~ 0
 U1_JTAG_TDI
 Wire Wire Line
 	-6450 -650 -5950 -650
@@ -2928,10 +2917,431 @@ Wire Wire Line
 	-700 5000 -700 5100
 Wire Wire Line
 	2450 5750 2600 5750
+$Comp
+L aha:PCIEx4 U?
+U 1 1 5EFF3BE2
+P 5700 -2300
+F 0 "U?" H 5700 -2200 50  0000 C CNN
+F 1 "PCIEx4" H 5700 -2400 50  0000 C CNN
+F 2 "" H 6450 -2200 50  0001 C CNN
+F 3 "" H 6450 -2200 50  0001 C CNN
+	1    5700 -2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 -3550 5100 -3650
+Wire Wire Line
+	5100 -3650 5200 -3650
+Wire Wire Line
+	5500 -3650 5500 -3550
+Wire Wire Line
+	5400 -3550 5400 -3650
+Connection ~ 5400 -3650
+Wire Wire Line
+	5400 -3650 5500 -3650
+Wire Wire Line
+	5300 -3550 5300 -3650
+Connection ~ 5300 -3650
+Wire Wire Line
+	5300 -3650 5400 -3650
+Wire Wire Line
+	5200 -3550 5200 -3650
+Connection ~ 5200 -3650
+Wire Wire Line
+	5200 -3650 5300 -3650
+$Comp
+L power:+12V #PWR?
+U 1 1 5F0FF3B1
+P 5300 -3650
+F 0 "#PWR?" H 5300 -3800 50  0001 C CNN
+F 1 "+12V" H 5315 -3477 50  0000 C CNN
+F 2 "" H 5300 -3650 50  0001 C CNN
+F 3 "" H 5300 -3650 50  0001 C CNN
+	1    5300 -3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 4450 -1950 0    50   Output ~ 0
+PCIE_SMCLK
+Text GLabel 4450 -1850 0    50   BiDi ~ 0
+PCIE_SMDATA
+Wire Wire Line
+	6600 -1150 6600 -1000
+Wire Wire Line
+	6600 -1000 6700 -1000
+Wire Wire Line
+	6700 -1000 6700 -1150
+Wire Wire Line
+	6500 -1150 6500 -1000
+Wire Wire Line
+	6500 -1000 6600 -1000
+Connection ~ 6600 -1000
+Wire Wire Line
+	6500 -1000 6400 -1000
+Wire Wire Line
+	6400 -1000 6400 -1150
+Connection ~ 6500 -1000
+Wire Wire Line
+	6100 -1150 6100 -1000
+Wire Wire Line
+	6100 -1000 6200 -1000
+Connection ~ 6400 -1000
+Wire Wire Line
+	6200 -1150 6200 -1000
+Connection ~ 6200 -1000
+Wire Wire Line
+	6200 -1000 6300 -1000
+Wire Wire Line
+	6000 -1150 6000 -1000
+Wire Wire Line
+	6000 -1000 6100 -1000
+Connection ~ 6100 -1000
+Wire Wire Line
+	5900 -1150 5900 -1000
+Wire Wire Line
+	5900 -1000 6000 -1000
+Connection ~ 6000 -1000
+Wire Wire Line
+	5800 -1150 5800 -1000
+Wire Wire Line
+	5800 -1000 5900 -1000
+Connection ~ 5900 -1000
+Wire Wire Line
+	5700 -1150 5700 -1000
+Wire Wire Line
+	5700 -1000 5800 -1000
+Connection ~ 5800 -1000
+Wire Wire Line
+	6300 -1150 6300 -1000
+Connection ~ 6300 -1000
+Wire Wire Line
+	6300 -1000 6400 -1000
+$Comp
+L power:GND #PWR?
+U 1 1 5F40DE44
+P 6200 -1000
+F 0 "#PWR?" H 6200 -1250 50  0001 C CNN
+F 1 "GND" V 6200 -1200 50  0000 C CNN
+F 2 "" H 6200 -1000 50  0001 C CNN
+F 3 "" H 6200 -1000 50  0001 C CNN
+	1    6200 -1000
+	1    0    0    -1  
+$EndComp
+Text GLabel 7000 -1700 2    50   Input ~ 0
+PCIE_HSOp0
+Text GLabel 7000 -1800 2    50   Input ~ 0
+PCIE_HSOn0
+Text GLabel 7000 -2100 2    50   Input ~ 0
+PCIE_HSOp1
+Text GLabel 7000 -2200 2    50   Input ~ 0
+PCIE_HSOn1
+Text GLabel 7000 -2700 2    50   Input ~ 0
+PCIE_HSOp2
+Text GLabel 7000 -2800 2    50   Output ~ 0
+PCIE_HSOn2
+Text GLabel 7000 -2900 2    50   Output ~ 0
+PCIE_HSOp3
+Text GLabel 7000 -3000 2    50   Output ~ 0
+PCIE_HSOn3
+$Comp
+L Device:R R235
+U 1 1 5F45DFF1
+P 4100 -2850
+F 0 "R235" V 4200 -2750 50  0000 R CNN
+F 1 "R" V 4100 -2800 50  0000 R CNN
+F 2 "" V 4030 -2850 50  0001 C CNN
+F 3 "~" H 4100 -2850 50  0001 C CNN
+	1    4100 -2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 -2850 4250 -2850
+$Comp
+L Device:R R234
+U 1 1 5EFF6135
+P 4100 -2750
+F 0 "R234" V 4000 -2650 50  0000 R CNN
+F 1 "R" V 4100 -2700 50  0000 R CNN
+F 2 "" V 4030 -2750 50  0001 C CNN
+F 3 "~" H 4100 -2750 50  0001 C CNN
+	1    4100 -2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 -2750 4250 -2750
+Wire Wire Line
+	3950 -2750 3900 -2750
+Wire Wire Line
+	4450 -2650 3800 -2650
+Wire Wire Line
+	3800 -2650 3800 -2800
+Wire Wire Line
+	3800 -2800 3900 -2800
+Wire Wire Line
+	3900 -2800 3900 -2750
+Wire Wire Line
+	3900 -2800 3900 -2850
+Wire Wire Line
+	3900 -2850 3950 -2850
+Connection ~ 3900 -2800
+Wire Wire Line
+	4450 -2150 4250 -2150
+Wire Wire Line
+	4250 -2150 4250 -2250
+Wire Wire Line
+	4250 -2250 4450 -2250
+Text GLabel 6300 -3550 1    50   Input ~ 0
+PCIE_PWRGD
+Text GLabel 7000 -1600 2    50   Input ~ 0
+PCIE_REFCLK+
+Text GLabel 7000 -1500 2    50   Input ~ 0
+PCIE_REFCLK-
+$Comp
+L Device:C C22
+U 1 1 5F174B78
+P 7650 -2000
+F 0 "C22" V 7398 -2000 50  0000 C CNN
+F 1 "C" V 7489 -2000 50  0000 C CNN
+F 2 "" H 7688 -2150 50  0001 C CNN
+F 3 "~" H 7650 -2000 50  0001 C CNN
+	1    7650 -2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C21
+U 1 1 5F175BA1
+P 7950 -1900
+F 0 "C21" V 8202 -1900 50  0000 C CNN
+F 1 "C" V 8111 -1900 50  0000 C CNN
+F 2 "" H 7988 -2050 50  0001 C CNN
+F 3 "~" H 7950 -1900 50  0001 C CNN
+	1    7950 -1900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7500 -2000 7000 -2000
+Wire Wire Line
+	7000 -1900 7800 -1900
+Text GLabel 8100 -1900 2    50   Input ~ 0
+PCIE_HSIn0
+Text GLabel 8100 -2000 2    50   Input ~ 0
+PCIE_HSIp0
+Wire Wire Line
+	7800 -2000 8100 -2000
+$Comp
+L Device:C C24
+U 1 1 5F2FBB9B
+P 7650 -2400
+F 0 "C24" V 7398 -2400 50  0000 C CNN
+F 1 "C" V 7489 -2400 50  0000 C CNN
+F 2 "" H 7688 -2550 50  0001 C CNN
+F 3 "~" H 7650 -2400 50  0001 C CNN
+	1    7650 -2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C23
+U 1 1 5F2FBF73
+P 7950 -2300
+F 0 "C23" V 7698 -2300 50  0000 C CNN
+F 1 "C" V 7789 -2300 50  0000 C CNN
+F 2 "" H 7988 -2450 50  0001 C CNN
+F 3 "~" H 7950 -2300 50  0001 C CNN
+	1    7950 -2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7500 -2400 7000 -2400
+Wire Wire Line
+	7000 -2300 7800 -2300
+Wire Wire Line
+	7800 -2400 8100 -2400
+Text GLabel 8100 -2300 2    50   Input ~ 0
+PCIE_HSIn1
+Text GLabel 8100 -2400 2    50   Input ~ 0
+PCIE_HSIp1
+$Comp
+L Device:C C20
+U 1 1 5F3EBBB7
+P 8400 -2600
+F 0 "C20" V 8148 -2600 50  0000 C CNN
+F 1 "C" V 8239 -2600 50  0000 C CNN
+F 2 "" H 8438 -2750 50  0001 C CNN
+F 3 "~" H 8400 -2600 50  0001 C CNN
+	1    8400 -2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C19
+U 1 1 5F3EBF4E
+P 8700 -2500
+F 0 "C19" V 8448 -2500 50  0000 C CNN
+F 1 "C" V 8539 -2500 50  0000 C CNN
+F 2 "" H 8738 -2650 50  0001 C CNN
+F 3 "~" H 8700 -2500 50  0001 C CNN
+	1    8700 -2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8250 -2600 7000 -2600
+Wire Wire Line
+	7000 -2500 8550 -2500
+Wire Wire Line
+	8550 -2600 9000 -2600
+Wire Wire Line
+	8850 -2500 9000 -2500
+Text GLabel 9000 -2500 2    50   Input ~ 0
+PCIE_HSIn2
+Text GLabel 9000 -2600 2    50   Input ~ 0
+PCIE_HSIp2
+$Comp
+L Device:C C18
+U 1 1 5F52E592
+P 7650 -3200
+F 0 "C18" V 7398 -3200 50  0000 C CNN
+F 1 "C" V 7489 -3200 50  0000 C CNN
+F 2 "" H 7688 -3350 50  0001 C CNN
+F 3 "~" H 7650 -3200 50  0001 C CNN
+	1    7650 -3200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C17
+U 1 1 5F52EBE4
+P 7950 -3100
+F 0 "C17" V 7698 -3100 50  0000 C CNN
+F 1 "C" V 7789 -3100 50  0000 C CNN
+F 2 "" H 7988 -3250 50  0001 C CNN
+F 3 "~" H 7950 -3100 50  0001 C CNN
+	1    7950 -3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7800 -3100 7000 -3100
+Wire Wire Line
+	7000 -3200 7500 -3200
+Wire Wire Line
+	7800 -3200 8100 -3200
+Text GLabel 8100 -3100 2    50   Input ~ 0
+PCIE_HSIn3
+Text GLabel 8100 -3200 2    50   Input ~ 0
+PCIE_HSIp3
+Wire Wire Line
+	5700 -1000 5600 -1000
+Wire Wire Line
+	5600 -1150 5600 -1000
+Connection ~ 5700 -1000
+Wire Wire Line
+	4700 -1150 4700 -1000
+Wire Wire Line
+	4700 -1000 4800 -1000
+Connection ~ 5600 -1000
+Wire Wire Line
+	4800 -1150 4800 -1000
+Connection ~ 4800 -1000
+Wire Wire Line
+	4800 -1000 4900 -1000
+Wire Wire Line
+	4900 -1150 4900 -1000
+Connection ~ 4900 -1000
+Wire Wire Line
+	4900 -1000 5000 -1000
+Wire Wire Line
+	5000 -1150 5000 -1000
+Connection ~ 5000 -1000
+Wire Wire Line
+	5000 -1000 5100 -1000
+Wire Wire Line
+	5100 -1150 5100 -1000
+Connection ~ 5100 -1000
+Wire Wire Line
+	5100 -1000 5200 -1000
+Wire Wire Line
+	5200 -1150 5200 -1000
+Connection ~ 5200 -1000
+Wire Wire Line
+	5200 -1000 5300 -1000
+Wire Wire Line
+	5300 -1150 5300 -1000
+Connection ~ 5300 -1000
+Wire Wire Line
+	5300 -1000 5400 -1000
+Wire Wire Line
+	5400 -1150 5400 -1000
+Connection ~ 5400 -1000
+Wire Wire Line
+	5400 -1000 5500 -1000
+Wire Wire Line
+	5500 -1150 5500 -1000
+Connection ~ 5500 -1000
+Wire Wire Line
+	5500 -1000 5600 -1000
+Text GLabel 16400 4850 0    50   BiDi ~ 0
+PCIE_SMDATA
+Text GLabel 16400 4750 0    50   Input ~ 0
+PCIE_SMCLK
+Text GLabel 16400 4950 0    50   Input ~ 0
+PCIE_PWRGD
+Wire Wire Line
+	16400 4750 16650 4750
+Wire Wire Line
+	16650 4850 16400 4850
+Wire Wire Line
+	16400 4950 16650 4950
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FC36F20
+P 15450 850
+F 0 "#PWR?" H 15450 700 50  0001 C CNN
+F 1 "+3.3V" H 15465 1023 50  0000 C CNN
+F 2 "" H 15450 850 50  0001 C CNN
+F 3 "" H 15450 850 50  0001 C CNN
+	1    15450 850 
+	1    0    0    -1  
+$EndComp
+Text GLabel 15800 1550 0    50   Output ~ 0
+FPGA_TEMPDIODEn
+Wire Wire Line
+	16650 1550 15800 1550
 Wire Bus Line
 	5900 4450 5900 5650
 Wire Bus Line
 	1550 3050 1550 5250
 Wire Bus Line
 	6500 700  6500 3500
+Text GLabel 16650 5150 0    50   Input ~ 0
+PCIE_REFCLK+
+Text GLabel 16650 5050 0    50   Input ~ 0
+PCIE_REFCLK-
+Text GLabel 16650 7550 0    50   Input ~ 0
+PCIE_HSOp0
+Text GLabel 16650 7450 0    50   Input ~ 0
+PCIE_HSOn0
+Text GLabel 16650 7650 0    50   Input ~ 0
+PCIE_HSIn0
+Text GLabel 16650 7750 0    50   Input ~ 0
+PCIE_HSIp0
+Text GLabel 16650 7950 0    50   Input ~ 0
+PCIE_HSOp1
+Text GLabel 16650 7850 0    50   Input ~ 0
+PCIE_HSOn1
+Text GLabel 16650 8050 0    50   Input ~ 0
+PCIE_HSIn1
+Text GLabel 16650 8150 0    50   Input ~ 0
+PCIE_HSIp1
+Text GLabel 16650 8450 0    50   Input ~ 0
+PCIE_HSIn2
+Text GLabel 16650 8550 0    50   Input ~ 0
+PCIE_HSIp2
+Text GLabel 16650 8350 0    50   Input ~ 0
+PCIE_HSOp2
+Text GLabel 16650 8250 0    50   Input ~ 0
+PCIE_HSOn2
+Text GLabel 16650 8750 0    50   Input ~ 0
+PCIE_HSOp3
+Text GLabel 16650 8650 0    50   Input ~ 0
+PCIE_HSOn3
+Text GLabel 16650 8850 0    50   Input ~ 0
+PCIE_HSIn3
+Text GLabel 16650 8950 0    50   Input ~ 0
+PCIE_HSIp3
 $EndSCHEMATC

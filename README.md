@@ -67,15 +67,16 @@ Arria TDI does not go to connector but goes to TDO of MAX2.
 Pins:
 
 ```
-AJ19:   Xtal 100
+AJ19: Y1, 100MHz
+AN19: Y2, 100Mhz (Also connected to the CPLD on pin E1)
 
 MSEL[3:0]: 4'b1100  - Remote system upgrade FPP with decompression feature enabled
 RUnLU:     1'b0     - Local update
 
 PCIe Pinout: https://en.wikipedia.org/wiki/PCI_Express#Pinout
 
-REFCLKn     : V2     (or maybe U7)
-REFCLKp     : V1     (or maybe U6)
+REFCLKn     : V2
+REFCLKp     : V1
 
 HSIn(3)     : AB5
 HSIp(3)     : AB4
@@ -89,17 +90,29 @@ HSIp(1)     : N4
 HSIn(0)     : R5
 HSIp(0)     : R4
 
-HSIn(3)     : AB2
-HSIp(3)     : AB1
+HSOn(3)     : AB2
+HSOp(3)     : AB1
 
-HSIn(2)     : Y2
-HSIp(2)     : Y1
+HSOn(2)     : Y2
+HSOp(2)     : Y1
 
-HSIn(1)     : N2        
-HSIp(1)     : N1
+HSOn(1)     : N2        
+HSOp(1)     : N1
 
-HSIn(0)     : R2
-HSIp(0)     : R1
+HSOn(0)     : R2
+HSOp(0)     : R1
+
+SMCLK:      : AJ23
+SMDATA:     : AK23
+POWERGD     : AL24 (?!)
+
+LED_1       : AM22
+LED_2       : AM21
+LED_3       : unknown
+LED_4       : CPLD pin D8
+LED_5       : AJ21
+LED_6       : AL21
+
 ```
 
 Dump Flash file:
