@@ -85,8 +85,8 @@ The next step is programming the board. This can be done via the JTAG header, J2
 |5 | VREF (3.3v) | GND
 
 Or more visually:
-![PCB component side J2](docs/j2-labelled-top.jpg?png=true "J2-front")
-![PCB back side J2](docs/j2-labelled-back.png?raw=true "J2-back")
+![PCB component side J2](docs/J2-labelled-top.jpg?png=true "J2-front")
+![PCB back side J2](docs/J2-labelled-back.png?raw=true "J2-back")
 
 If everything works OK, the chain should scan as follows:
 
