@@ -85,6 +85,7 @@ The next step is programming the board. This can be done via the JTAG header, J2
 |5 | VREF (3.3v) | GND
 
 Or more visually:
+
 ![PCB component side J2](docs/J2-labelled-top.png?png=true "J2-front")
 ![PCB back side J2](docs/J2-labelled-bottom.png?raw=true "J2-back")
 
@@ -189,16 +190,15 @@ source bscan.tcl
 
 # References and links
 * The AHA363 board
-[Vendor info](http://www.aha.com/DrawProducts.aspx?Action=GetProductDetails&ProductID=14)
+	* [Vendor info](http://www.aha.com/DrawProducts.aspx?Action=GetProductDetails&ProductID=14)
 * Altera EP1AGX90EF1152C6N: Arria GX 90E
-[Arria GX Handbook](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/agx/arriagx_handbook.pdf)
-[Arria GX pinout](https://www.intel.com/content/www/us/en/programmable/support/literature/lit-dp.html)
-[BSDL files for Arria GX FPGAs](https://www.intel.com/content/www/us/en/programmable/support/support-resources/download/board-layout-test/bsdl/arriagx.html) and
+	* [Arria GX Handbook](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/agx/arriagx_handbook.pdf)
+	* [Arria GX pinout](https://www.intel.com/content/www/us/en/programmable/support/literature/lit-dp.html)
+	* [BSDL files for Arria GX FPGAs](https://www.intel.com/content/www/us/en/programmable/support/support-resources/download/board-layout-test/bsdl/arriagx.html) and
       [BSDL file for this FPGA](https://www.intel.com/content/dam/altera-www/global/en_US/others/support/devices/bsdl/EP1AGX90EF1152.BSD)
 * Altera EPM570F100C4N MAX II CPLD
-[MAX II Handbook](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max2/max2_mii5v1.pdf)
-See [Arria GX Development Board Reference Manual](http://static6.arrow.com/aropdfconversion/8a0fa1b74c4ba00b20a5b2c3e5429593b6c2bd57/rm_arria_gx_pcie_board.pdf) for 4x PCIe reference design with EPM570 to handle bootup and flash programming. 
-[Parallel Flash Load IP Core User Guide](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/an/an386.pdf)
-[BSDL files for MAX II CPLDs](https://www.intel.com/content/www/us/en/programmable/support/support-resources/download/board-layout-test/bsdl/max2.html)
-[BSDL file for EPM570F100](https://www.intel.com/content/dam/altera-www/global/en_US/others/support/devices/bsdl/EPM570F100.BSD)
-
+	* [MAX II Handbook](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max2/max2_mii5v1.pdf)
+	* See [Arria GX Development Board Reference Manual](http://static6.arrow.com/aropdfconversion/8a0fa1b74c4ba00b20a5b2c3e5429593b6c2bd57/rm_arria_gx_pcie_board.pdf) for 4x PCIe reference design with EPM570 to handle bootup and flash programming. 
+	* [Parallel Flash Load IP Core User Guide](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/an/an386.pdf)
+	* [BSDL files for MAX II CPLDs](https://www.intel.com/content/www/us/en/programmable/support/support-resources/download/board-layout-test/bsdl/max2.html)
+	* [BSDL file for EPM570F100](https://www.intel.com/content/dam/altera-www/global/en_US/others/support/devices/bsdl/EPM570F100.BSD)
