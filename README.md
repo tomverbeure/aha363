@@ -86,7 +86,7 @@ The next step is programming the board. This can be done via the JTAG header, J2
 
 Or more visually:
 ![PCB component side J2](docs/J2-labelled-top.png?png=true "J2-front")
-![PCB back side J2](docs/J2-labelled-back.png?raw=true "J2-back")
+![PCB back side J2](docs/J2-labelled-bottom.png?raw=true "J2-back")
 
 If everything works OK, the chain should scan as follows:
 
